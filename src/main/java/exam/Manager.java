@@ -1,5 +1,7 @@
 package exam;
 
+import java.util.Arrays;
+
 public class Manager extends Employee{
     private  final double EXTRADISCOUNT = DISCOUNT + .05;
     private double salary;
@@ -14,8 +16,8 @@ public class Manager extends Employee{
 
 
     @Override
-    public double printPriceAfterDiscount() {
-        return 0;
+    public double printPriceAfterDiscount(Cloth cloth) {
+        return  cloth.getPrice() - (cloth.getPrice() * EXTRADISCOUNT);
     }
 
     @Override
@@ -45,7 +47,13 @@ public class Manager extends Employee{
     }
 
     @Override
-    public void printInfo() {
-        System.out.println(getName() + " Makes $" + getSalary() + "\nHis Shopping bag consists of " );
+    public void printInfo(Cloth [] cloths) {
+        System.out.print(getName() + " Makes $" + getSalary() + " and his Shopping bag consists of : "  );
+        for(Cloth p : cloths){
+            System.out.print(p.getName() + " ");
+
+        }
+        System.out.println("");
+
     }
 }

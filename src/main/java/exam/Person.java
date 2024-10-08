@@ -10,7 +10,7 @@ public abstract class Person {
         this.size = size;
     }
 
-    public void printInfo(){
+    public void printInfo(Cloth[] cloths){
         System.out.println("my name is : " + this.name + "\n My size is : " + this.size);
     }
 
@@ -32,9 +32,9 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", size=" + size +
-                '}';
+        return
+                "name:'" + name + '\'' +
+                ", size: " + size
+                ;
     }
 }

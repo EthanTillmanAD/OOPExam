@@ -21,18 +21,10 @@ public class Cloth {
 
 
     public double getPrice() {
-        return price;
+        return this.price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public static String getClothName(Cloth[] cloths) {
-        for(Cloth p : cloths){
-            return p.name;
-        }
-
-        return "";
+    public String getName() {
+        return name;
     }
 }

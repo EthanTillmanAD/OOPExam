@@ -19,6 +19,6 @@ public abstract class Customer extends Person {
         this.clothingItems = clothingItems;
     }
 
-    public abstract double printPriceAfterDiscount();
+    public abstract double printPriceAfterDiscount(Cloth cloth);
 
 }

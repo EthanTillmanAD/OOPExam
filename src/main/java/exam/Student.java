@@ -21,11 +21,11 @@ public class Student extends Customer{
     }
 
     @Override
-    public double printPriceAfterDiscount() {
+    public double printPriceAfterDiscount(Cloth cloth) {
         return 0;
     }
     public static void printStudentsCount(){
-        System.out.println("Total student count: " + studentCount);
+        System.out.println("We have created " + studentCount + "students in our database successfully");
     }
 
     @Override

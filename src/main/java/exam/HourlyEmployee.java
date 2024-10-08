@@ -15,11 +15,10 @@ public class HourlyEmployee extends Employee{
 
 
 
-    @Override
-    public double printPriceAfterDiscount() {
 
+    public double printPriceAfterDiscount(Cloth cloth) {
 
-           return 0;
+           return  cloth.getPrice() - (cloth.getPrice() * DISCOUNT);
     }
 
     @Override
@@ -44,7 +43,7 @@ public class HourlyEmployee extends Employee{
         if(hoursWorked > 0){
             this.hoursWorked = hoursWorked;
         }else{
-            System.out.println("you cant work negative hours");
+            System.out.println("hoursWorked cannot be a negative number");
 
         }
 
